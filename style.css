@@ -1,3 +1,48 @@
 body {
-	cursor: url('cursor.cur'), auto;
+	cursor: url('images/cursor.png'), auto;
+}
+
+.element:hover {
+	cursor: url('images/cursor_outline_yellow.png'), auto;
+}
+
+@keyframes sparkleFade {
+	to {
+		opacity: 0;
+		transform: scale(0.5);
+	}
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-image: url('images/background.jpg');
+	background-size: cover;        /* Makes the image fill the screen */
+	background-position: center;   /* Centers the image */
+	background-repeat: no-repeat;  /* Prevents tiling */
+	display: flex;
+	flex-direction: column;       /* Stack items vertically */
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.top-image {
+	width: 256px;                 /* Adjust size as needed */
+	margin-bottom: 30px;          /* Space between logo and links */
+}
+
+.image-links {
+	display: flex;
+	gap: 40px; /* space between images */
+}
+
+.image-links img {
+	width: 100px; /* adjust size as needed */
+	height: auto;
+	transition: transform 0.3s ease;
+}
+
+.image-links img:hover {
+	transform: scale(1.1); /* optional hover effect */
 }
